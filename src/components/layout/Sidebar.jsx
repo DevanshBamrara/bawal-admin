@@ -1,25 +1,19 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Users, ShoppingBag, Box, Activity, LogOut } from 'lucide-react';
+import { LayoutDashboard, Users, ShoppingBag, Box, Activity, LogOut, X } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, setIsOpen }) => {
   const { logout } = useAuth();
 
   return (
-    <aside style={{
-      width: 'var(--sidebar-width)',
-      height: '100vh',
-      position: 'fixed',
-      left: 0,
-      top: 0,
-      borderRight: '1px solid var(--border-color)',
-      backgroundColor: 'var(--bg-color)',
-      display: 'flex',
-      flexDirection: 'column'
-    }}>
-      <div className="bawal-logo-box">
+    <aside className={`sidebar-container ${isOpen ? 'open' : ''}`}>
+      <div className="bawal-logo-box" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <h1 className="bawal-logo">BAWAL<sup>TM</sup></h1>
+        
+        <button className="mobile-only" onClick={() => setIsOpen(false)} style={{ color: '#fff' }}>
+          <X size={24} />
+        </button>
       </div>
 
       <nav style={{ padding: '32px 24px', flex: 1, display: 'flex', flexDirection: 'column', gap: '8px' }}>

@@ -147,7 +147,7 @@ const ProductsManager = () => {
 
         {/* Product List Grid */}
         <GridBlock colSpan={2} rowSpan={2} style={{ overflowY: 'auto', maxHeight: '1000px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+          <div className="flex-wrap-mobile" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
             <p className="grid-block-header" style={{ marginBottom: 0 }}>CURRENT COLLECTION</p>
             <span className="bawal-badge">{products.length} ITEMS</span>
           </div>

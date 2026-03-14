@@ -58,7 +58,7 @@ const Dashboard = () => {
 
         {/* Low Stock Alerts - Spanning 2 columns wide, 2 rows deep to draw attention */}
         <GridBlock colSpan={2} rowSpan={2} style={{ borderLeft: stats?.lowStockCount > 0 ? '8px solid var(--accent-red)' : '' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
+          <div className="flex-wrap-mobile" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
             <h2 style={{ fontSize: '2rem' }}>STOCK ALERTS</h2>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               {stats?.lowStockCount > 0 && <AlertOctagon color="var(--accent-red)" />}
@@ -90,7 +90,7 @@ const Dashboard = () => {
 
         {/* Recent Orders - Minimalist Editorial Table */}
         <GridBlock colSpan={2} rowSpan={2}>
-           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
+           <div className="flex-wrap-mobile" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
             <h2 style={{ fontSize: '2rem' }}>RECENT ORDERS</h2>
             <button className="bawal-button-outline">VIEW ALL</button>
           </div>

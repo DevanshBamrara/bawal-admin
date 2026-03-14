@@ -32,7 +32,7 @@ const OrdersManager = () => {
       <EditorialGrid>
         
         <GridBlock colSpan={4} style={{ backgroundColor: '#111', color: '#fff' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+          <div className="flex-wrap-mobile" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
             <div>
               <h1 className="mega-text">ORDERS</h1>
               <p style={{ marginTop: '16px', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
